@@ -6,7 +6,6 @@ const openClose = trigger('openClose', [
   state(
     'open',
     style({
-      transform: 'translate(0px, -2px)',
       width: 100,
       opacity: 1,
     })
@@ -14,33 +13,29 @@ const openClose = trigger('openClose', [
   state(
     'close',
     style({
-      transform: 'translate(0px, 0px)',
       width: 22,
       opacity: 0.8
     })
   ),
-  transition('open => close', [animate('2s ease-out')]),
-  transition('close => open', [animate('2s ease-in')])
+  transition('open => close', [animate('0.2s ease-out')]),
+  transition('close => open', [animate('0.2s ease-in')])
 ]);
-
-// animação de width
-const inform = trigger('inform', [
+// animação de fade
+const fade = trigger('fade', [
   state(
     'open',
     style({
       opacity: 1,
-      width: '100%',
     })
   ),
   state(
     'close',
     style({
-      opacity: 0,
-      width: '50%',
+      opacity: 0
     })
   ),
-  transition('open => close', [animate('2s ease-out')]),
-  transition('close => open', [animate('2s ease-in')])
+  transition('open => close', [animate('0.2s ease-out')]),
+  transition('close => open', [animate('0.2s ease-in')])
 ]);
 
 // animação de fade
@@ -60,17 +55,16 @@ const fadeInOut = trigger(
       [
         style({ opacity: 1 }),
         animate('0.2s ease-out',
-                style({ opacity: 0 }))
+                style({ opacity: 0}))
       ]
     )
   ]
 );
-
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.css'],
-  animations: [openClose, fadeInOut, inform]
+  animations: [openClose, fadeInOut, fade]
 })
 
 export class CardComponent {
