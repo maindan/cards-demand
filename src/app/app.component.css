@@ -1,0 +1,63 @@
+.main {
+  width: 100%;
+  height: 100%;
+  background: #EAEDF3;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin: 30px 0px 27px 0px
+}
+
+.filters span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: 7px;
+}
+
+.filters p {
+  font-family: 'SF light';
+  font-size: 16px;
+}
+
+.doing {
+  color: #909A4F;
+  border: 1.5px solid #909A4F;
+  img {
+    color: #1558FF;
+  }
+}
+.pending {
+  color: #E69143;
+  border: 1.5px solid #E69143;
+}
+.done {
+  color: #1558FF;
+  border: 1.5px solid #1558FF;
+}
+
+.cards {
+  margin-top: 13px;
+  padding: 0px 21px;
+  height: max-content;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: initial;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cards.small {
+  padding-right: 150px;
+}
+.cards.smaller {
+  padding-right: 275px;
+}
+
