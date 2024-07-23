@@ -6,7 +6,7 @@
     <!-- card aberto e fechado -->
     <div class="profile-info" [ngClass]="verify? 'expanded':'decreased'">
       <img ngSrc="{{itemData.item.foto}}" width="73" height="73" class="profile-image" [ngClass]="verify ? 'expanded' : ''">
-      <span *ngIf="verify" class="informations" [@inOutAnimation]>
+      <span *ngIf="verify" class="informations">
         <h4 class="fullname">{{itemData.item.nomeCompleto}}</h4>
         <p class="cargo">{{itemData.item.cargo}}</p>
       </span>
@@ -17,19 +17,19 @@
 
     <!-- card aberto e fechado -->
     <ul class="task-list" [ngClass]="verify ? 'expanded' : ''">
-      <li class="doing" [@openClose]="verify ? 'open' : 'close'">{{(itemData.item.doing).length}} <p class="" [ngClass]="verify ? 'expanded' : 'hiden'" [@inOutAnimation]>Fazendo</p></li>
-      <li class="pending" [@openClose]="verify ? 'open' : 'close'">{{itemData.item.pending}} <p [ngClass]="verify ? 'expanded' : 'hiden'" [@inOutAnimation]>Pendentes</p></li>
-      <li class="done" [@openClose]="verify ? 'open' : 'close'">{{itemData.item.done}} <p [ngClass]="verify ? 'expanded' : 'hiden'" [@inOutAnimation]>Feito</p></li>
+      <li class="doing" [@openClose]="verify ? 'open' : 'close'">{{(itemData.item.doing).length}} <p *ngIf="verify" class="" [ngClass]="verify ? 'expanded' : ''">Fazendo</p></li>
+      <li class="pending" [@openClose]="verify ? 'open' : 'close'">{{itemData.item.pending}} <p *ngIf="verify" [ngClass]="verify ? 'expanded' : ''">Pendentes</p></li>
+      <li class="done" [@openClose]="verify ? 'open' : 'close'">{{itemData.item.done}} <p *ngIf="verify" [ngClass]="verify ? 'expanded' : ''">Feito</p></li>
     </ul>
 
     <!-- card aberto -->
-    <div class="tasks" *ngIf="verify" [@inOutAnimation]>
+    <div class="tasks" *ngIf="verify">
       <p>Demanda atual:</p>
       <ul class="demands">
         <li *ngFor="let item of itemData.item.doing">{{item}}</li>
       </ul>
     </div>
-    <button *ngIf="verify" [@inOutAnimation]>Veja mais</button>
+    <button *ngIf="verify">Veja mais</button>
   </div>
 
 </div>
