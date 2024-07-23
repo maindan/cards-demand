@@ -14,28 +14,11 @@ const openClose = trigger('openClose', [
     'close',
     style({
       width: 22,
-      opacity: 0.8
+      opacity: 0.9
     })
   ),
-  transition('open => close', [animate('0.2s ease-out')]),
-  transition('close => open', [animate('0.2s ease-in')])
-]);
-// animação de fade
-const fade = trigger('fade', [
-  state(
-    'open',
-    style({
-      opacity: 1,
-    })
-  ),
-  state(
-    'close',
-    style({
-      opacity: 0
-    })
-  ),
-  transition('open => close', [animate('0.2s ease-out')]),
-  transition('close => open', [animate('0.2s ease-in')])
+  transition('open => close', [animate('150ms ease-out')]),
+  transition('close => open', [animate('150ms ease-in')])
 ]);
 
 // animação de fade
@@ -64,7 +47,7 @@ const fadeInOut = trigger(
   selector: 'app-card',
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.css'],
-  animations: [openClose, fadeInOut, fade]
+  animations: [openClose, fadeInOut]
 })
 
 export class CardComponent {
@@ -114,7 +97,7 @@ export class CardComponent {
       const numItems = this.itemData.item.doing.length;
       if(numItems < 2) {
         itemHeight = 90;
-      } else if (numItems > 3) {
+      } else if (numItems === 4) {
         itemHeight = 73;
       }
       return `${baseHeight + (itemHeight * numItems)}px`;

@@ -27,7 +27,7 @@ export class AppComponent {
       doing: [
         'Prototipagem de versão mobile da tela de Gerenciamento de Demandas.',
         'Modelagem do 1º andar Projex Consulting no sketchup e renderização no enscape.',
-        'Criação de arte para quadro Projex Consulting e Energin Sustentabilidade com informações de Missão, Visão e Valores.'
+        'Criação de arte para quadro Projex Consulting e Energin Sustentabilidade com informações de Missão, Visão e Valores.',
       ],
       pending: 5,
       done: 25
@@ -141,6 +141,7 @@ export class AppComponent {
     }
   }
 
+  // track do indice da lista de objetos sendo enviado para o componente filho
   trackByFn(index: number, item: object): object {
     return item;
   }

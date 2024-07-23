@@ -3,7 +3,7 @@
 [ngStyle]="{'height': getHeight()}"
 >
   <div [ngClass]="verify ? 'expanded' : 'decreased'">
-    <!-- card aberto -->
+    <!-- card aberto e fechado -->
     <div class="profile-info" [ngClass]="verify? 'expanded':'decreased'">
       <img ngSrc="{{itemData.item.foto}}" width="73" height="73" class="profile-image" [ngClass]="verify ? 'expanded' : ''">
       <span *ngIf="verify" class="informations" [@inOutAnimation]>
@@ -12,14 +12,14 @@
       </span>
     </div>
 
-
+    <!-- card fechado -->
     <h4 class="name" [ngClass]="verify? 'expanded':'decreased'">{{itemData.item.nome}}</h4>
 
     <!-- card aberto e fechado -->
     <ul class="task-list" [ngClass]="verify ? 'expanded' : ''">
-      <li class="doing" [@openClose]="verify ? 'open' : 'close'">{{(itemData.item.doing).length}} <p [ngClass]="verify ? 'expanded' : 'hiden'">Fazendo</p></li>
-      <li class="pending" [@openClose]="verify ? 'open' : 'close'">{{itemData.item.pending}} <p [ngClass]="verify ? 'expanded' : 'hiden'">Pendentes</p></li>
-      <li class="done" [@openClose]="verify ? 'open' : 'close'">{{itemData.item.done}} <p [ngClass]="verify ? 'expanded' : 'hiden'">Feito</p></li>
+      <li class="doing" [@openClose]="verify ? 'open' : 'close'">{{(itemData.item.doing).length}} <p [ngClass]="verify ? 'expanded' : 'hiden'" [@inOutAnimation]>Fazendo</p></li>
+      <li class="pending" [@openClose]="verify ? 'open' : 'close'">{{itemData.item.pending}} <p [ngClass]="verify ? 'expanded' : 'hiden'" [@inOutAnimation]>Pendentes</p></li>
+      <li class="done" [@openClose]="verify ? 'open' : 'close'">{{itemData.item.done}} <p [ngClass]="verify ? 'expanded' : 'hiden'" [@inOutAnimation]>Feito</p></li>
     </ul>
 
     <!-- card aberto -->
