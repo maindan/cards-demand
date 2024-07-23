@@ -193,6 +193,7 @@
   justify-content: center;
   width: 100%;
   min-height: 55px;
+  max-height: 73px;
   border-radius: 6px;
   padding: 11px 20px;
   border-left: 6px solid #1558FF;
