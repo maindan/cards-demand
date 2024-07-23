@@ -98,7 +98,7 @@ export class CardComponent {
       if(numItems < 2) {
         itemHeight = 95;
       } else if (numItems > 3) {
-        itemHeight = 75;
+        itemHeight = 76;
       }
       return `${baseHeight + (itemHeight * numItems)}px`;
     }
