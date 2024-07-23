@@ -13,12 +13,12 @@ const openClose = trigger('openClose', [
   state(
     'close',
     style({
-      width: 22,
+      width: 23,
       opacity: 0.9
     })
   ),
   transition('open => close', [animate('0.2s ease-out')]),
-  transition('close => open', [animate('0.2s ease-in')])
+  transition('close => open', [animate('0.3s ease-in')])
 ]);
 
 // animação de fade

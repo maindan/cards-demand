@@ -70,6 +70,7 @@
 .doing {
   color: #909a4f;
   background-color: #eef3ca;
+  margin-left: 43px;
   transition: all 0.2s ease-in-out;
 }
 .pending {
@@ -80,7 +81,8 @@
 .done {
   color: #1558ff;
   background-color: #d0deff;
-  transition: all 0.2s ease-in-out;
+  margin-right: 43px;
+  /* transition: all 0.2s ease-in-out; */
 }
 
 /******* Componentes dentro do card expandido *******/

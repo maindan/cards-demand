@@ -17,9 +17,9 @@
 
     <!-- card aberto e fechado -->
     <ul class="task-list" [ngClass]="verify ? 'expanded' : ''">
-      <li class="doing" [@openClose]="verify ? 'open' : 'close'">{{(itemData.item.doing).length}} <p *ngIf="verify" class="" [ngClass]="verify ? 'expanded' : ''">Fazendo</p></li>
-      <li class="pending" [@openClose]="verify ? 'open' : 'close'">{{itemData.item.pending}} <p *ngIf="verify" [ngClass]="verify ? 'expanded' : ''">Pendentes</p></li>
-      <li class="done" [@openClose]="verify ? 'open' : 'close'">{{itemData.item.done}} <p *ngIf="verify" [ngClass]="verify ? 'expanded' : ''">Feito</p></li>
+      <li [@openClose]="verify ? 'open' : 'close'" class="doing" >{{(itemData.item.doing).length}} <p *ngIf="verify" class="" [ngClass]="verify ? 'expanded' : ''">Fazendo</p></li>
+      <li [@openClose]="verify ? 'open' : 'close'" class="pending" >{{itemData.item.pending}} <p *ngIf="verify" [ngClass]="verify ? 'expanded' : ''">Pendentes</p></li>
+      <li [@openClose]="verify ? 'open' : 'close'" class="done" >{{itemData.item.done}} <p *ngIf="verify" [ngClass]="verify ? 'expanded' : ''">Feito</p></li>
     </ul>
 
     <!-- card aberto -->
