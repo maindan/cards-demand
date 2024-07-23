@@ -4,14 +4,14 @@
   border-radius: 16px;
   background: white;
   margin: 0px 8px;
-  padding: 13px 10px;
+  padding: 13px 0px;
   transition: all 0.2s ease-in-out;
   overflow: hidden;
 }
 
 .card.expanded-0, .card.expanded-1, .card.expanded-2 {
   width: 371px;
-  padding: 13px 22px;
+  padding: 13px 0px;
 }
 
 .card.expanded-0 {
@@ -39,7 +39,7 @@
 /******* Componentes dentro do card estreito *******/
 
 .profile-image {
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .name.decreased {
@@ -55,7 +55,7 @@
   justify-content: center;
   list-style: none;
   gap: 10px;
-  margin: 9px 0px;
+  margin: 9px 0px 19px 0px;
 }
 
 .task-list li {
@@ -111,7 +111,7 @@
 }
 
 .profile-image.expanded {
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .name.expanded {
@@ -135,8 +135,9 @@
 .task-list.expanded {
   display: flex;
   flex-direction: row;
+  align-items: center;
   width: 100%;
-  margin: 13px 0px 9px 0px;
+  margin: 13px;
 }
 
 .task-list.expanded li {
@@ -161,14 +162,15 @@
 }
 
 .task-list li p.expanded {
-  display: flex;
-  justify-content: center;
+  text-align: center;
+  opacity: 1;
 }
 
 .tasks {
   display: flex;
   flex-direction: column;
   align-items: initial;
+  margin: 0px 22px;
 }
 
 .tasks p {
@@ -208,4 +210,40 @@ button {
   background: none;
   border: none;
   margin: 13px 0px;
+}
+
+@media screen and (max-width: 400px) {
+  .card {
+    width: 110px;
+    height: 175px;
+    border-radius: 16px;
+    background: white;
+    margin: 0px 5px;
+    padding: 10px 0px;
+    transition: all 0.2s ease-in-out;
+    overflow: hidden;
+  }
+
+  .card.expanded-0, .card.expanded-1, .card.expanded-2 {
+    width: 355px;
+    padding: 10px 0px;
+  }
+
+  .card.expanded-0 {
+    margin: 0px 10px 0px 250px;
+  }
+  .card.expanded-2 {
+    margin: 0px 250px 0px 10px;
+  }
+
+  .profile-image {
+    margin-left: 18px;
+  }
+  .profile-image.expanded {
+    margin-left: 18px;
+  }
+
+  .task-list.expanded {
+    margin: 13px 0px;
+  }
 }

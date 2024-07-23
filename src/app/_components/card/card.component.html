@@ -17,7 +17,7 @@
 
     <!-- card aberto e fechado -->
     <ul class="task-list" [ngClass]="verify ? 'expanded' : ''">
-      <li class="doing" [@openClose]="verify ? 'open' : 'close'">{{(itemData.item.doing).length}} <p [ngClass]="verify ? 'expanded' : 'hiden'" [@inOutAnimation]>Fazendo</p></li>
+      <li class="doing" [@openClose]="verify ? 'open' : 'close'">{{(itemData.item.doing).length}} <p class="" [ngClass]="verify ? 'expanded' : 'hiden'" [@inOutAnimation]>Fazendo</p></li>
       <li class="pending" [@openClose]="verify ? 'open' : 'close'">{{itemData.item.pending}} <p [ngClass]="verify ? 'expanded' : 'hiden'" [@inOutAnimation]>Pendentes</p></li>
       <li class="done" [@openClose]="verify ? 'open' : 'close'">{{itemData.item.done}} <p [ngClass]="verify ? 'expanded' : 'hiden'" [@inOutAnimation]>Feito</p></li>
     </ul>

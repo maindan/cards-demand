@@ -11,12 +11,12 @@
   *ngFor="let itemsConjunto of conjunto"
   [ngClass]="{'small': itemsConjunto.length === 2, 'smaller': itemsConjunto.length === 1}"
 >
-  <li class="card-list" *ngFor="let item of itemsConjunto; let i = index; trackBy: trackByFn">
-    <app-card
-      (verification)="getVerification($event)"
-      (actualCard)="getItem($event)"
-      [itemData]="{ index: i, item: item }">
-    </app-card>
-  </li>
+    <li class="card-list" *ngFor="let item of itemsConjunto; let i = index; trackBy: trackByFn">
+      <app-card
+        (verification)="getVerification($event)"
+        (actualCard)="getItem($event)"
+        [itemData]="{ index: i, item: item }">
+      </app-card>
+    </li>
 </ul>
 </div>

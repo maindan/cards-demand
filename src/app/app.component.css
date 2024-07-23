@@ -61,3 +61,15 @@
   padding-right: 275px;
 }
 
+@media screen and (max-width: 400px) {
+  .cards {
+    margin: 13px 10px;
+  }
+
+  .cards.small {
+    padding-right: 140px;
+  }
+  .cards.smaller {
+    padding-right: 260px;
+  }
+}
