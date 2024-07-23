@@ -93,13 +93,13 @@ export class CardComponent {
   getHeight(): string {
     if (this.verify) {
       const baseHeight = 170;
-      let itemHeight = 80;
+      let itemHeight = 85;
       const numItems = this.itemData.item.doing.length;
-      if(numItems < 2) {
-        itemHeight = 90;
-      } else if (numItems === 4) {
-        itemHeight = 73;
-      }
+      // if(numItems < 2) {
+      //   itemHeight = 90;
+      // } else if (numItems === 4) {
+      //   itemHeight = 73;
+      // }
       return `${baseHeight + (itemHeight * numItems)}px`;
     }
     return '170px';
