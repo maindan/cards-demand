@@ -18,7 +18,7 @@ const openClose = trigger('openClose', [
     })
   ),
   transition('open => close', [animate('0.2s ease-out')]),
-  transition('close => open', [animate('0.3s ease-in')])
+  transition('close => open', [animate('0.2s ease-in')])
 ]);
 
 // animação de fade
